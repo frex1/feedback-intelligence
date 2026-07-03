@@ -1,9 +1,6 @@
 
 # Real-Time Retail Feedback Intelligence 🛍️
 
-<div align="center">
-  <img src="https://mma.prnewswire.com/media/1458111/Great_Learning_Logo.jpg?p=facebook" width="200" height="100" alt="Great Learning"/>
-
 ---
 
 ## 📋 Table of Contents
@@ -161,7 +158,7 @@ graph LR
 
 ### Data Quality
 
-```
+```Shell
 Duplicate rows removed:                 21
 Missing Review.Text (dropped):          845
 Missing Title (filled as empty):        3,810
@@ -204,7 +201,7 @@ uv venv --python 3.12.12
 # On macOS/Linux:
 source .venv/bin/activate
 # On Windows:
-# .venv\Scripts\activate
+.venv\Scripts\activate
 
 # Install dependencies
 uv pip install pandas numpy matplotlib seaborn wordcloud openai tenacity gradio scikit-learn requests ipykernel
@@ -638,7 +635,17 @@ This is a demonstration project built for the Great Learning curriculum. Improve
 
 By exploring this project, you'll learn:
 
-✅  **Prompt Engineering** : Zero-shot, few-shot, and chain-of-thought techniques ✅  **LLM Evaluation** : Building a judge framework to compare prompts ✅  **Aspect-Based Sentiment Analysis** : Going beyond binary classification ✅  **Data Pipeline Design** : From raw data to production-ready insights ✅  **Practical Generative AI** : Using local models for privacy-preserving applications ✅  **End-to-End ML Projects** : Data cleaning, EDA, modeling, evaluation, and deployment (UI)
+✅  **Prompt Engineering** : Zero-shot, few-shot, and chain-of-thought techniques 
+
+✅  **LLM Evaluation** : Building a judge framework to compare prompts 
+
+✅  **Aspect-Based Sentiment Analysis** : Going beyond binary classification 
+
+✅  **Data Pipeline Design** : From raw data to production-ready insights 
+
+✅  **Practical Generative AI** : Using local models for privacy-preserving applications
+
+ ✅  **End-to-End ML Projects** : Data cleaning, EDA, modeling, evaluation, and deployment (UI)
 
 
 ## 📄 License
@@ -663,7 +670,7 @@ For issues or questions:
 * **Models** : Google Gemma 3, Meta Llama 3.2 (via Ollama)
 * **Framework** : Built with Jupyter Notebook for interactivity
 * **UI** : Gradio for accessible web interface
-* **Curriculum** : Great Learning Machine Learning & Generative AI Program
+* **Curriculum** : Great Learning AAIDSP Program
 
 
 
