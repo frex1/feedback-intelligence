@@ -70,7 +70,7 @@ graph TD
     C --> D5["Chain-of-Thought V1<br/>Reasoning Step 1"]
     C --> D6["Chain-of-Thought V2<br/>Reasoning Step 2"]
   
-    D1 --> E1["Task Model<br/>Gemma 3:270M"]
+    D1 --> E1["Task Model<br/>llama3.2:1b"]
     D2 --> E1
     D3 --> E1
     D4 --> E1
@@ -79,7 +79,7 @@ graph TD
   
     E1 --> F["Extract:<br/>• Aspect Sentiments<br/>• Urgency Level<br/>• Product Category<br/>• Draft Reply"]
   
-    F --> G["Judge Model<br/>Llama 3.2:1B"]
+    F --> G["Judge Model<br/>deepseek-r1:1.5b"]
   
     G --> H["Evaluation Scores<br/>• Consistency<br/>• Accuracy<br/>• Relevance"]
   
@@ -185,8 +185,8 @@ Download and install Ollama from [https://ollama.com/download](https://ollama.co
 ollama serve &
 
 # Pull the two models used in this project
-ollama pull gemma3:270m      # Small, fast task model (270M parameters)
-ollama pull llama3.2:1b      # Slightly larger judge model (1B parameters)
+ollama pull llama3.2:1b # Still small (1B parameters)
+ollama pull deepseek-r1:1.5b     # Slightly larger judge model (1.5B parameters)
 ```
 
 ### Step 3: Set Up Python Environment
@@ -536,10 +536,10 @@ The notebook uses `Rating` and `Recommended.IND` as proxy ground truth:
 
 ### LLM Models
 
-| Model                    | Size        | Purpose                       | Why                                                         |
-| ------------------------ | ----------- | ----------------------------- | ----------------------------------------------------------- |
-| **Gemma 3 (270M)** | 270M params | Task execution (6 techniques) | Fast, efficient, suitable for latency-sensitive tagging     |
-| **Llama 3.2 (1B)** | 1B params   | Judge/evaluation              | Better reasoning for consistent evaluation across 6 configs |
+| Model                        | Size        | Purpose                       | Why                                                         |
+| ---------------------------- | ----------- | ----------------------------- | ----------------------------------------------------------- |
+| **Llama 3.2 (1B)**     | 1B params   | Task execution (6 techniques) | Faster, efficient, suitable for latency-sensitive tagging   |
+| **deepseek-r1 (1.5B)** | 1.5B params | Judge/evaluation              | Better reasoning for consistent evaluation across 6 configs |
 
 ### Infrastructure
 
@@ -667,7 +667,7 @@ For issues or questions:
 ## 🎓 Acknowledgments
 
 * **Dataset** : Women's E-Commerce Clothing Reviews
-* **Models** : Google Gemma 3, Meta Llama 3.2 (via Ollama)
+* **Models** : DeepSeek v1, Meta Llama 3.2 (via Ollama)
 * **Framework** : Built with Jupyter Notebook for interactivity
 * **UI** : Gradio for accessible web interface
 * **Curriculum** : Great Learning AAIDSP Program
